@@ -8,9 +8,22 @@ namespace ShopBaseballBats.Controllers
     {
         public ActionResult Detail()
         {
+            ViewBag.BatBrand = "Louisville Slugger";
+            ViewBag.BatLength = 32;
+            ViewBag.BatWeight = 22;
+            ViewBag.BatPrice = 99;
+            ViewBag.Description = "<p> Louisville is home of the slugger.</p>";
+            ViewBag.BatModels = new string[]
+            {
+                "Meta 22",
+                "LXT 21",
+                "LXT 22",
+                "Xeno 22",
+                "Xeno 21"
+            };
 
             {
-               return View();
+                return View();
             }
 
         }

@@ -1,19 +1,7 @@
 ﻿@{
     Layout = null;
     // ViewData["Title"] = "Home Page";
-    var batBrand = "Louisville Slugger";
-    var batLength = 32;
-    var batWeight = 22;
-    var batPrice = 99;
-    var description = "<p> Louisville is home of the slugger.</p>";
-    var batModel = new string[]
-    {
-                "Meta 22",
-                "LXT 21",
-                "LXT 22",
-                "Xeno 22",
-                "Xeno 21"
-    };
+   
 }
 <!DOCTYPE html>
 <html>
@@ -30,11 +18,24 @@
         <h1>
             Shop Baseball Bats
         </h1>
-        <h2>@batBrand</h2>
-        <h2>Description: @Html.Raw(description)</h2>
-        <h3>Model:</h3>
-            <div>@batModel</div>
-        <h3>@batLength</h3>
+        <h2>@ViewBag.BatBrand</h2>
+        <h2>Description: @Html.Raw(ViewBag.Description)</h2>
+            @if (ViewBag.BatModels.Length > 0)
+                {
+                    <h3>Model:</h3>
+                    <div>
+                        <ul>
+                            @foreach (var batModel in ViewBag.BatModels)
+                                {   
+                                    <li>@batModel, @ViewBag.BatLength/@ViewBag.BatWeight</li>
+                            
+                            
+                                }
+                        </ul>
+                    </div>
+                }
+
+       
 
     </div>
 </body>
