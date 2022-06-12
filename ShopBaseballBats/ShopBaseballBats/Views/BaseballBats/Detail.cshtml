@@ -1,11 +1,43 @@
 ﻿@{
     Layout = null;
     // ViewData["Title"] = "Home Page";
+    var batBrand = "Louisville Slugger";
+    var batLength = 32;
+    var batWeight = 22;
+    var batPrice = 99;
+    var description = "<p> Louisville is home of the slugger.</p>";
+    var batModel = new string[]
+    {
+                "Meta 22",
+                "LXT 21",
+                "LXT 22",
+                "Xeno 22",
+                "Xeno 21"
+    };
 }
-
-
-<div class="text-center">
+<!DOCTYPE html>
+<html>
+<head></head>
+    <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <h1> Hello from the view</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<title></title>
+
+<body>
+    <div>
+        <h1>
+            Shop Baseball Bats
+        </h1>
+        <h2>@batBrand</h2>
+        <h2>Description: @Html.Raw(description)</h2>
+        <h3>Model:</h3>
+            <div>@batModel</div>
+        <h3>@batLength</h3>
+
+    </div>
+</body>
+
+
+</html>
