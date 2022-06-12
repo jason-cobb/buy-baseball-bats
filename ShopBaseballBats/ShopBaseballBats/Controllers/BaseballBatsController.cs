@@ -10,12 +10,7 @@ namespace ShopBaseballBats.Controllers
         {
 
             {
-                if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
-                {
-                    return new RedirectResult("/");
-
-                }
-                return Content("Hello Brave World.");
+               return View();
             }
 
         }
