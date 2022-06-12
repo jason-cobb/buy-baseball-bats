@@ -6,6 +6,22 @@ namespace ShopBaseballBats.Controllers
 {
     public class BaseballBatsController : Controller
     {
+        public ActionResult Detail()
+        {
+
+            {
+                if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+                {
+                    return new RedirectResult("/");
+
+                }
+                return Content("Hello Brave World.");
+            }
+
+        }
+    }
+}
+      /*  
         private readonly ILogger<BaseballBatsController> _logger;
 
         public BaseballBatsController(ILogger<BaseballBatsController> logger)
@@ -15,6 +31,7 @@ namespace ShopBaseballBats.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
@@ -29,4 +46,4 @@ namespace ShopBaseballBats.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-}
+}*/
