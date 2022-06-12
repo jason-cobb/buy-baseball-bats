@@ -4,11 +4,11 @@ using System.Diagnostics;
 
 namespace ShopBaseballBats.Controllers
 {
-    public class HomeController : Controller
+    public class BaseballBatsController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<BaseballBatsController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public BaseballBatsController(ILogger<BaseballBatsController> logger)
         {
             _logger = logger;
         }
