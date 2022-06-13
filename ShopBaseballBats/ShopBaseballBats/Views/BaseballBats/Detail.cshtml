@@ -1,23 +1,10 @@
 ﻿@{
-    Layout = null;
-    // ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Baseball Bat Shop";
+    //ViewData["Title"] = "Home Page";
    
 }
-<!DOCTYPE html>
-<html>
-<head></head>
-    <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <h1> Hello from the view</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<title></title>
 
-<body>
-    <div>
-        <h1>
-            Shop Baseball Bats
-        </h1>
         <h2>@ViewBag.BatBrand</h2>
         <h2>Description: @Html.Raw(ViewBag.Description)</h2>
             @if (ViewBag.BatModels.Length > 0)
@@ -35,10 +22,4 @@
                     </div>
                 }
 
-       
-
-    </div>
-</body>
-
-
-</html>
+   
