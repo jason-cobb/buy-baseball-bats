@@ -13,13 +13,13 @@ namespace ShopBaseballBats.Models
             public int Id { get; set; }
             public int BatId { get; set; }
             public BatModel[] BatModels { get; set; }
-            public string DescriptionHtml { get; set; }
+            public string ?DescriptionHtml { get; set; }
 
             public bool Favorite { get; set; }
 
             public string DisplayText
             {
-                get { return BatModels + DescriptionHtml; }
+                get { return "Shop Bats!"; }
             }
             //series-title-issuenumber.jpg
             //batmodel-year.jpg

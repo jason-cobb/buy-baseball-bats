@@ -8,23 +8,24 @@ namespace ShopBaseballBats.Controllers
     {
         public ActionResult Detail()
         {
-            ViewBag.BatBrand = "Louisville Slugger";
-            ViewBag.BatLength = 32;
-            ViewBag.BatWeight = 22;
-            ViewBag.BatPrice = 99;
-            ViewBag.Description = "<p> Louisville is home of the slugger.</p>";
-            ViewBag.BatModels = new string[]
+            var baseballBats = new BaseballBats()
             {
-                "Meta 22",
-                "LXT 21",
-                "LXT 22",
-                "Xeno 22",
-                "Xeno 21"
-            };
+                BatBrand = "Louisville Slugger",
+                DescriptionHtml = "<p>Swing for the fences.</p>",
+                BatModels = new BatModel[]
+                    {
+                       
+                        new BatModel() {Name = "Meta", Length = 33, Weight = 22},
+                         new BatModel() {Name = "Meta", Length = 32, Weight = 22},
+                         new BatModel() {Name = "LXT", Length = 33, Weight = 22},
+                        new BatModel() {Name = "LXT", Length = 32, Weight = 22},
+                        new BatModel() {Name = "Xeno", Length = 33, Weight = 22},
+                         new BatModel() {Name = "Xeno", Length = 32, Weight = 22},
 
-            {
-                return View();
-            }
+                    }
+            };
+           
+            return View(baseballBats);
 
         }
     }

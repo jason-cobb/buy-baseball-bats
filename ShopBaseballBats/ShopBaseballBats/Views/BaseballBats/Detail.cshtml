@@ -1,21 +1,21 @@
-﻿@{
+﻿@model ShopBaseballBats.Models.BaseballBats
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Baseball Bat Shop";
+    ViewBag.Title =  Model.DisplayText;//"Baseball Bat Shop";
     //ViewData["Title"] = "Home Page";
    
 }
 
-        <h2>@ViewBag.BatBrand</h2>
-        <h2>Description: @Html.Raw(ViewBag.Description)</h2>
-            @if (ViewBag.BatModels.Length > 0)
+        <h2>@Model.BatBrand</h2>
+        <h2>Description: @Html.Raw(Model.DescriptionHtml)</h2>
+            @if (Model.BatModels.Length > 0)
                 {
-                    <h3>Model:</h3>
+                    <h3>Models:</h3>
                     <div>
                         <ul>
-                            @foreach (var batModel in ViewBag.BatModels)
+                            @foreach (var batModel in Model.BatModels)
                                 {   
-                                    <li>@batModel, @ViewBag.BatLength/@ViewBag.BatWeight</li>
-                            
+                                    <li>@batModel.Name: @batModel.Length/@batModel.Weight</li>
                             
                                 }
                         </ul>
