@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopBaseballBats.Data;
 using ShopBaseballBats.Models;
 using System.Diagnostics;
 
@@ -6,24 +7,18 @@ namespace ShopBaseballBats.Controllers
 {
     public class BaseballBatsController : Controller
     {
-        public ActionResult Detail()
+        private BaseballBatsRepository _baseballBatsRepository = null;
+        public BaseballBatsController()
         {
-            var baseballBats = new BaseballBats()
+            _baseballBatsRepository = new BaseballBatsRepository();
+        }
+        public ActionResult Detail(int? id)
+        {
+            if (id == null)
             {
-                BatBrand = "Louisville Slugger",
-                DescriptionHtml = "<p>Swing for the fences.</p>",
-                BatModels = new BatModel[]
-                    {
-                       
-                        new BatModel() {Name = "Meta", Length = 33, Weight = 22},
-                         new BatModel() {Name = "Meta", Length = 32, Weight = 22},
-                         new BatModel() {Name = "LXT", Length = 33, Weight = 22},
-                        new BatModel() {Name = "LXT", Length = 32, Weight = 22},
-                        new BatModel() {Name = "Xeno", Length = 33, Weight = 22},
-                         new BatModel() {Name = "Xeno", Length = 32, Weight = 22},
-
-                    }
-            };
+                return null;// HttpNotFound();
+            }
+            var baseballBats = _baseballBatsRepository.GetBaseballBats(id.Value);
            
             return View(baseballBats);
 

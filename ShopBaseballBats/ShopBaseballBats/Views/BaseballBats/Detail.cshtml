@@ -1,9 +1,10 @@
 ﻿@model ShopBaseballBats.Models.BaseballBats
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title =  Model.DisplayText;//"Baseball Bat Shop";
-    //ViewData["Title"] = "Home Page";
-   
+   // ViewBag.Title =  Model.DisplayText;//"Baseball Bat Shop";
+                                       //ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Model.DisplayText";
+
 }
 <h2>@Model.DisplayText</h2>
 <div class="row">
@@ -28,12 +29,14 @@
             
         </div>
         <h5>Description:</h5>
-        <div>@Html.Raw(Model.DescriptionHtml)</div>
+        <p>@Html.Raw(Model.DescriptionHtml)</p>
+    </div>
         
        
-    </div>
-    <div class="col-md-6">
-        <h5>Insert image here.</h5>
+    
+    <div class="col-md-6" style="height: 200px;">
+        
+        <img src="/Images/lxt22.jpg" alt="@Model.DisplayText" class="img-respnsive"/>
     </div>
    
 </div>
