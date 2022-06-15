@@ -1,7 +1,20 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ShopBaseballBats.Models.BaseballBats[]
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Baseball Bats";
 }
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    @foreach (var baseballBats in Model)
+    {
+        <div class="col-md-3">
+        <h4>@baseballBats.DisplayText</h4>
+        <img src="/Images/@baseballBats.CoverImageFileName"
+            alt="@baseballBats.DisplayText"
+            class="img-responsive"/>
+
+        </div>
+        
+    }
+    
+</div>
