@@ -9,10 +9,10 @@ namespace ShopBaseballBats.Models
 {
     public class BaseballBats
     {   
-               //BatBrand as a class or interface for LS, Easton, Rawlings etc.
+              
             public string ?BatBrand { get; set; }
             public int Id { get; set; }
-            public int BatId { get; set; }
+            
             public BatModel[] ?BatModels { get; set; }
             public string ?DescriptionHtml { get; set; }
 

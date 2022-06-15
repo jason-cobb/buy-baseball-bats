@@ -12,11 +12,17 @@ namespace ShopBaseballBats.Controllers
         {
             _baseballBatsRepository = new BaseballBatsRepository();
         }
+        public ActionResult Index()
+        {
+            var baseballBats = _baseballBatsRepository.GetBaseballBats();
+            return View(baseballBats);
+        }
         public ActionResult Detail(int? id)
         {
             if (id == null)
             {
-                return null;// HttpNotFound();
+                return NotFound();
+
             }
             var baseballBats = _baseballBatsRepository.GetBaseballBats(id.Value);
            

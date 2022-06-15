@@ -56,9 +56,13 @@ namespace ShopBaseballBats.Data
 
     };
 
+            public BaseballBats[] GetBaseballBats()
+        {
+            return _baseballBats;
+        }
             public BaseballBats GetBaseballBats(int id)
         {
-            BaseballBats baseballBatsToReturn = null;
+            BaseballBats? baseballBatsToReturn = null;
 
             foreach (var baseballBats in _baseballBats)
             {
