@@ -8,11 +8,12 @@
     @foreach (var baseballBats in Model)
     {
         <div class="col-md-3">
-        <h4>@baseballBats.DisplayText</h4>
-        <img src="/Images/@baseballBats.CoverImageFileName"
-            alt="@baseballBats.DisplayText"
-            class="img-responsive"/>
-
+        <h4>@Html.ActionLink(baseballBats.DisplayText, "Detail", new { id = baseballBats.Id } )</h4>
+          <a href="@Url.Action("Detail", new { id = baseballBats.Id})">
+            <img src="/Images/@baseballBats.CoverImageFileName"
+                alt="@baseballBats.DisplayText"
+                class="img-responsive"/>
+          </a>
         </div>
         
     }
