@@ -29,6 +29,10 @@ namespace ShopBaseballBats.Controllers
             return View(baseballBats);
 
         }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
 }
       /*  
@@ -45,10 +49,7 @@ namespace ShopBaseballBats.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
