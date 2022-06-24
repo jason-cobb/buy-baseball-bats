@@ -1,18 +1,20 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 //using System.Linq;
 //using System.Web;
 
 
 namespace ShopBaseballBats.Models
 {
-    public class BaseballBats
-    {   
-              
-            public string ?BatBrand { get; set; }
-            public int Id { get; set; }
+    public class BaseballBat
+    {
+            [Key]
             
+            public int Id { get; set; }
+            public string? BatBrand { get; set; }
+
             public BatModel[] ?BatModels { get; set; }
             public string ?DescriptionHtml { get; set; }
 

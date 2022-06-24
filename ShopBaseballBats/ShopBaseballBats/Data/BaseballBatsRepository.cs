@@ -5,9 +5,9 @@ namespace ShopBaseballBats.Data
 {
     public class BaseballBatsRepository
     {
-        private static BaseballBats[] _baseballBats = new BaseballBats[]
+        private static BaseballBat[] _baseballBat = new BaseballBat[]
         {
-            new BaseballBats()
+            new BaseballBat()
             {
                 Id = 1,
                 BatBrand = "Louisville Slugger",
@@ -25,7 +25,7 @@ namespace ShopBaseballBats.Data
                }
             },
 
-            new BaseballBats()
+            new BaseballBat()
             {
                 Id = 2,
                 BatBrand = "Easton",
@@ -38,7 +38,7 @@ namespace ShopBaseballBats.Data
                        
                }
             },
-            new BaseballBats()
+            new BaseballBat()
             {
                 Id= 3,
                 BatBrand = "Rawlings",
@@ -56,15 +56,15 @@ namespace ShopBaseballBats.Data
 
     };
 
-            public BaseballBats[] GetBaseballBats()
+            public BaseballBat[] GetBaseballBats()
         {
-            return _baseballBats;
+            return _baseballBat;
         }
-            public BaseballBats GetBaseballBats(int id)
+            public BaseballBat GetBaseballBats(int id)
         {
-            BaseballBats? baseballBatsToReturn = null;
+            BaseballBat? baseballBatsToReturn = null;
 
-            foreach (var baseballBats in _baseballBats)
+            foreach (var baseballBats in _baseballBat)
             {
                 if (baseballBats.Id == id)
                 {  
