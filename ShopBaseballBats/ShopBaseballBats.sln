@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBaseballBats", "ShopBaseballBats\ShopBaseballBats.csproj", "{0E1F699B-36E2-4E8B-97BA-E95AD7C74B50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopBaseballBats", "ShopBaseballBats\ShopBaseballBats.csproj", "{0E1F699B-36E2-4E8B-97BA-E95AD7C74B50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9BE7CDAC-C161-4998-8BB0-89B13045EAC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBaseballBats.BLTest", "Tests\ShopBaseballBats.BLTest\ShopBaseballBats.BLTest.csproj", "{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{0E1F699B-36E2-4E8B-97BA-E95AD7C74B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E1F699B-36E2-4E8B-97BA-E95AD7C74B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E1F699B-36E2-4E8B-97BA-E95AD7C74B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF} = {9BE7CDAC-C161-4998-8BB0-89B13045EAC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75081464-6C8B-4C25-A77A-8648CF5FB605}

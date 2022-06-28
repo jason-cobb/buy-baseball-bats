@@ -12,12 +12,12 @@ namespace ShopBaseballBats.Controllers
         {
             _baseballBatsRepository = new BaseballBatsRepository();
         }
-        public ActionResult Index()
+        public IActionResult Index()
         {
             var baseballBats = _baseballBatsRepository.GetBaseballBats();
             return View(baseballBats);
         }
-        public ActionResult Detail(int? id)
+        public IActionResult Detail(int? id)
         {
             if (id == null)
             {
