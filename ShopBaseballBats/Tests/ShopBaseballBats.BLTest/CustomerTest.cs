@@ -22,5 +22,33 @@ namespace ShopBaseballBats.BLTest
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void FullNameFirstNameEmpty()
+        {
+            //--Arrange
+            Customer customer = new Customer();
+            { customer.LastName = "Washington";}
+            string expected = "Washington";
+            //-- Act
+            string actual = customer.FullName;
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void FullNameLastNameEmpty()
+        {
+            //--Arrange
+            Customer customer = new Customer();
+            { customer.FirstName = "George"; }
+            string expected = "George";
+            //-- Act
+            string actual = customer.FullName;
+
+            //--Assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
