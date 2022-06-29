@@ -7,8 +7,10 @@ namespace ShopBaseballBats.Models
         public CustomerDbContext() : base() { }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            // connect to sqlite database
-            options.UseSqlServer(@"Data Source=test.db");
+           
+            options.UseSqlServer(@"Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog = ShopBaseballBatsData");
+           // optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=ShopBaseballBatsData");
+
         }
 
         public DbSet<Customer>? Customers { get; set; }
