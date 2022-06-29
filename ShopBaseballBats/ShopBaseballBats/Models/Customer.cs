@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using ShopBaseballBats.Models;
 using ShopBaseballBats.Data;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace ShopBaseballBats.Models
@@ -35,7 +37,7 @@ namespace ShopBaseballBats.Models
                 get { return _lastName; }
                 set { _lastName = value; }
             }
-
+        public List<Address>? Addresses { get; set; }
 
     }
 }

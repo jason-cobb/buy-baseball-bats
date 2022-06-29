@@ -1,7 +1,12 @@
+using ShopBaseballBats.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<CustomerDbContext>();
+
+
 
 var app = builder.Build();
 
