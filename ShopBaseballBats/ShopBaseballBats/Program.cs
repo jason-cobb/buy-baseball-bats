@@ -1,10 +1,12 @@
+using ShopBaseballBats.Data;
 using ShopBaseballBats.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<CustomerDbContext>();
+builder.Services.AddDbContext<BaseballBatContext>();
+//builder.Services.AddScoped<IBaseballBatsRepository, IBaseballBatsRepository>();
 
 
 

@@ -5,17 +5,28 @@ using System.Diagnostics;
 
 namespace ShopBaseballBats.Controllers
 {
+    //[Route("api/[controller]")]
     public class BaseballBatsController : Controller
     {
-        private BaseballBatsRepository _baseballBatsRepository = null;
+
+        // private readonly IBaseballBatsRepository _baseballBatsRepository = null;
         public BaseballBatsController()
         {
-            _baseballBatsRepository = new BaseballBatsRepository();
         }
-        public IActionResult Index()
+    }
+}
+       // [HttpGet]
+      /*  public async Task<IActionResult> Index()
         {
-            var baseballBats = _baseballBatsRepository.GetBaseballBats();
-            return View(baseballBats);
+            try
+            {
+                var baseballBats = await _baseballBatsRepository.GetBaseballBatsAsync();
+                return View(baseballBats);
+            }
+            catch (Exception)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,"Database Failure");
+            }
         }
         public IActionResult Detail(int? id)
         {

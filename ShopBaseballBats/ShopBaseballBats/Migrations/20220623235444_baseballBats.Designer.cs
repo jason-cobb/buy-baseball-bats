@@ -13,7 +13,7 @@ namespace ShopBaseballBats.Migrations
 {
     [DbContext(typeof(BaseballBatContext))]
     [Migration("20220623235444_baseballBats")]
-    partial class baseballBats
+    partial class BaseballBats
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

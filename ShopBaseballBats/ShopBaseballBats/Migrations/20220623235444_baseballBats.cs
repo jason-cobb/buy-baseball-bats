@@ -4,7 +4,7 @@
 
 namespace ShopBaseballBats.Migrations
 {
-    public partial class baseballBats : Migration
+    public partial class BaseballBats : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
