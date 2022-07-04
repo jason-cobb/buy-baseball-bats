@@ -9,9 +9,9 @@
 
         }
 
-    public Address(int addressId)
+        public Address(int addressId)
     {
-        addressId = addressId;
+        AddressId = addressId;
     }
     public int AddressId { get; private set; }
     public int AddressType { get; set; }

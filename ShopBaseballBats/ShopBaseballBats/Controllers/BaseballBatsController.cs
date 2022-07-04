@@ -7,13 +7,38 @@ namespace ShopBaseballBats.Controllers
 {
     //[Route("api/[controller]")]
     public class BaseballBatsController : Controller
-    {
 
-        // private readonly IBaseballBatsRepository _baseballBatsRepository = null;
-        public BaseballBatsController()
-        {
-        }
+
+        private BaseballBatsRepository _baseballBatsRepository = null;
+    public BaseballBatsController()
+    {
+        _baseballBatsRepository = new BaseballBatsRepository();
     }
+    public ActionResult Index()
+    {
+        var baseballBats = _baseballBatsRepository.GetBaseballBats();
+        return View(baseballBats);
+    }
+    public ActionResult Detail(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+
+        }
+        var baseballBats = _baseballBatsRepository.GetBaseballBats(id.Value);
+
+        return View(baseballBats);
+
+    }
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+}
+}
+
+
 }
        // [HttpGet]
       /*  public async Task<IActionResult> Index()
