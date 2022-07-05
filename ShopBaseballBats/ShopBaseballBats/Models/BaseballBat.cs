@@ -15,7 +15,7 @@ namespace ShopBaseballBats.Models
             public int Id { get; set; }
             public string? BatBrand { get; set; }
 
-            public BatModel[] ?BatModels { get; set; }
+        public BatModel<>? BatModels { get; set; }
             public string ?DescriptionHtml { get; set; }
 
             public bool Favorite { get; set; }
@@ -27,12 +27,12 @@ namespace ShopBaseballBats.Models
             //series-title-issuenumber.jpg
             //batmodel-year.jpg
             public string CoverImageFileName
-        {
-            get
             {
-                return "lxt22.jpg"; //BatModels.Replace(" ", "-").ToLower() + "-" + BatModel.Length+ ".jpg";
-            }
-            //~/Images/meta22.jpg";
+                get
+                {
+                    return "lxt22.jpg"; //BatModels.Replace(" ", "-").ToLower() + "-" + BatModel.Length+ ".jpg";
+                }
+                //~/Images/meta22.jpg";
             }
         
     }
