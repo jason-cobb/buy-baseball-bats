@@ -7,7 +7,7 @@ namespace ShopBaseballBats.Data
     public class BaseballBatContext : DbContext
     {
         public DbSet<BaseballBat>? BaseballBats { get; set; }
-        public DbSet<BatModel>? BatModels { get; set; }
+        public DbSet<BatBrand>? BatBrands { get; set; }
 
         public DbSet<Customer>? Customers { get; set; }
 

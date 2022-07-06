@@ -13,9 +13,9 @@ namespace ShopBaseballBats.Models
             [Key]
             
             public int Id { get; set; }
-            public string? BatBrand { get; set; }
+            //public string? BatBrand { get; set; }
 
-        public BatModel<>? BatModels { get; set; }
+            public List<BatBrand>? BatBrands { get; set; }
             public string ?DescriptionHtml { get; set; }
 
             public bool Favorite { get; set; }
