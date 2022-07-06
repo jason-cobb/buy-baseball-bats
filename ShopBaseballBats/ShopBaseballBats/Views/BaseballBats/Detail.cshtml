@@ -13,7 +13,7 @@
         <div class="well">
             <h5><label>Bat Brand:</label> @Model.BatBrand</h5>
            
-            <h5><label>Favorite:</label> @(Model.Favorite ? "Yes" : "No")</h5>
+            <h5><label>Favorite:</label> @(Model.ToCart ? "Yes" : "No")</h5>
             @if (Model.BatModels.Length > 0)
                 {
                     <h5>Models:</h5>

@@ -18,7 +18,7 @@ namespace ShopBaseballBats.Models
             public List<BatBrand>? BatBrands { get; set; }
             public string ?DescriptionHtml { get; set; }
 
-            public bool Favorite { get; set; }
+            public bool ToCart { get; set; }
 
             public string DisplayText
             {
