@@ -37,7 +37,8 @@ namespace ShopBaseballBats.Models
                 get { return _lastName; }
                 set { _lastName = value; }
             }
-        public List<Address>? Addresses { get; set; }
+        public Address Address { get; set; }
+        public string? Phone { get; set; }
 
     }
 }

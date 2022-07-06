@@ -8,23 +8,24 @@
         {
 
         }
+        /*
+                public Address(int addressId)
+                {
+                    AddressId = addressId;
+                }
+            public int AddressId { get; private set; }
+            public int AddressType { get; set; }
+                */
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string PostalCode { get; set; }
+        public string State { get; set; }
+        public string StreetLine1 { get; set; }
+        public string StreetLine2 { get; set; }
 
-        public Address(int addressId)
-        {
-            AddressId = addressId;
-        }
-    public int AddressId { get; private set; }
-    public int AddressType { get; set; }
-    public string City { get; set; }
-    public string Country { get; set; }
-    public string PostalCode { get; set; }
-    public string State { get; set; }
-    public string StreetLine1 { get; set; }
-    public string StreetLine2 { get; set; }
+        public Customer Customer { get; set; }
 
-    
-
-    public bool Validate()
+        public bool Validate()
     {
         var isValid = true;
         if ((PostalCode ==null) || StreetLine1==null)
