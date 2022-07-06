@@ -22,7 +22,7 @@ namespace ShopBaseballBats.Models
 
             public string DisplayText
             {
-                get { return BatBrand + "Shop Your Favorite Bats!"; }
+                get { return BatBrands + "Shop Your Favorite Bats!"; }
             }
             //series-title-issuenumber.jpg
             //batmodel-year.jpg
