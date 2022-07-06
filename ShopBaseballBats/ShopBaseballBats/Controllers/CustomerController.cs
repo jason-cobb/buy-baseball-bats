@@ -1,15 +1,83 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ShopBaseballBats.Data;
 using ShopBaseballBats.Models;
-using System.Collections.Generic;
-
 
 namespace ShopBaseballBats.Controllers
 {
     public class CustomerController : Controller
     {
-        private readonly BaseballBatContext _context;
+        private readonly BaseballBatContext db = new BaseballBatContext();
+        //GET: Customer
+
+        public ActionResult Index()
+        {
+            var customers = from e in db.Customers
+                            orderby e.CustomerId
+                            select e;
+            return View(customers);
+           // var model = _context.Customers.ToList();
+            //return View(model);
+        }
+        //GET: Customer/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //GET: Customer/Create
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            try
+            {
+                db.Customers.Add(customer);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        //GET Customer/Edit/5
+        public ActionResult Edit(int id)
+        {
+            var customer = db.Customers.Single(m => m.CustomerId == id);
+            return View(customer);
+        }
+
+        //POST: Employee/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, FormCollection collection)
+        {
+            try
+            {
+                var customer = db.Customers.Single(m => m.CustomerId == id);
+                if (TryUpdateModel(customer))
+                {
+                    //ToDo: - database code
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(customer);
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        private bool TryUpdateModel(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        /*
+
+
+
+
+
         public CustomerController ( BaseballBatContext context )
         {
             _context = context;
@@ -21,11 +89,7 @@ namespace ShopBaseballBats.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Index()
-        {
-            var model = _context.Customers.ToList();
-            return View(model);
-        }
+        
         /*possible use to use for saving data using bool is active elsewhere
           public IActionResult GetActive()
         {
@@ -34,6 +98,13 @@ namespace ShopBaseballBats.Controllers
         }
         */
         //to get a specific customer vs a collection
+
+
+
+
+
+
+        /*
         public IActionResult Details(string name)
         {
             var model = _context.Customers.FirstOrDefault(e=> e.FullName == name);
@@ -57,6 +128,7 @@ namespace ShopBaseballBats.Controllers
             }
             return RedirectToAction("Index");
         }
+        */
     }
 
 
