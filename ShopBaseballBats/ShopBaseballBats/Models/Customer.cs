@@ -10,7 +10,7 @@ namespace ShopBaseballBats.Models
 {
     public class Customer
     {
-        
+        [Key]
             public int CustomerId { get; private set; }
             public string? EmailAddress { get; set; }
             public string FirstName { get; set; }
@@ -37,7 +37,7 @@ namespace ShopBaseballBats.Models
                 get { return _lastName; }
                 set { _lastName = value; }
             }
-        public Address Address { get; set; }
+        public  Address? Address { get; set; }
         public string? Phone { get; set; }
 
     }

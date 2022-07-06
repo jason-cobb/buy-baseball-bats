@@ -23,7 +23,7 @@
         public string StreetLine1 { get; set; }
         public string StreetLine2 { get; set; }
 
-        public Customer Customer { get; set; }
+
 
         public bool Validate()
     {

@@ -11,15 +11,15 @@
 <div class="row">
     <div class="col-md-6">
         <div class="well">
-            <h5><label>Bat Brand:</label> @Model.BatBrand</h5>
+            <h5><label>Bat Brand:</label> @Model.BatBrands</h5>
            
-            <h5><label>Favorite:</label> @(Model.ToCart ? "Yes" : "No")</h5>
-            @if (Model.BatModels.Length > 0)
+            <h5><label>Favorite:</label> @(Model.Favorite ? "Yes" : "No")</h5>
+            @if (Model.BatBrands != null)
                 {
                     <h5>Models:</h5>
                     <div>
                         <ul>
-                            @foreach (var batModel in Model.BatModels)
+                            @foreach (var batModel in Model.BatBrands)
                                 {   
                                     <li>@batModel.ModelName: @batModel.Length/@batModel.Weight</li>
                             

@@ -99,7 +99,12 @@ namespace ShopBaseballBats.Controllers
         */
         //to get a specific customer vs a collection
 
-
+        public IActionResult Index()
+        {
+            ViewData["Title"]= "Customers";
+            var model = _context.Customers.ToList();
+            return View(model);
+        }
 
 
 
