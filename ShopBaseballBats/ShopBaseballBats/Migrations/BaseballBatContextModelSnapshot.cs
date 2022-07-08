@@ -22,52 +22,7 @@ namespace ShopBaseballBats.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("ShopBaseballBats.Models.Address", b =>
-                {
-                    b.Property<int>("AddressId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddressId"), 1L, 1);
-
-                    b.Property<int>("AddressType")
-                        .HasColumnType("int");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Country")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PostalCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetLine1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StreetLine2")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AddressId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Address");
-                });
-
-            modelBuilder.Entity("ShopBaseballBats.Models.BaseballBat", b =>
+            modelBuilder.Entity("ShopBaseballBats.Models.BaseballBats", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,21 +30,15 @@ namespace ShopBaseballBats.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("BatBrand")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DescriptionHtml")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("Favorite")
-                        .HasColumnType("bit");
+                    b.Property<int>("ModelYear")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("BaseballBats");
                 });
 
-            modelBuilder.Entity("ShopBaseballBats.Models.BatModel", b =>
+            modelBuilder.Entity("ShopBaseballBats.Models.BatBrand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -97,13 +46,22 @@ namespace ShopBaseballBats.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("BaseballBatId")
+                    b.Property<int?>("BaseballBatsId")
                         .HasColumnType("int");
+
+                    b.Property<string>("BrandName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Cart")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("DescriptionHtml")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Length")
                         .HasColumnType("int");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ModelNames")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -115,9 +73,9 @@ namespace ShopBaseballBats.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BaseballBatId");
+                    b.HasIndex("BaseballBatsId");
 
-                    b.ToTable("BatModels");
+                    b.ToTable("BatBrands");
                 });
 
             modelBuilder.Entity("ShopBaseballBats.Models.Customer", b =>
@@ -139,33 +97,24 @@ namespace ShopBaseballBats.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CustomerId");
 
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("ShopBaseballBats.Models.Address", b =>
+            modelBuilder.Entity("ShopBaseballBats.Models.BatBrand", b =>
                 {
-                    b.HasOne("ShopBaseballBats.Models.Customer", null)
-                        .WithMany("Addresses")
-                        .HasForeignKey("CustomerId");
+                    b.HasOne("ShopBaseballBats.Models.BaseballBats", null)
+                        .WithMany("BatBrands")
+                        .HasForeignKey("BaseballBatsId");
                 });
 
-            modelBuilder.Entity("ShopBaseballBats.Models.BatModel", b =>
+            modelBuilder.Entity("ShopBaseballBats.Models.BaseballBats", b =>
                 {
-                    b.HasOne("ShopBaseballBats.Models.BaseballBat", null)
-                        .WithMany("BatModels")
-                        .HasForeignKey("BaseballBatId");
-                });
-
-            modelBuilder.Entity("ShopBaseballBats.Models.BaseballBat", b =>
-                {
-                    b.Navigation("BatModels");
-                });
-
-            modelBuilder.Entity("ShopBaseballBats.Models.Customer", b =>
-                {
-                    b.Navigation("Addresses");
+                    b.Navigation("BatBrands");
                 });
 #pragma warning restore 612, 618
         }

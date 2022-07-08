@@ -1,19 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShopBaseballBats.Models;
-using ShopBaseballBats.Data;
+
 
 namespace ShopBaseballBats.Data
 {
     public class BaseballBatContext : DbContext
     {
-        public DbSet<BaseballBat>? BaseballBats { get; set; }
+        public DbSet<BaseballBats>? BaseballBats { get; set; }
         public DbSet<BatBrand>? BatBrands { get; set; }
 
         public DbSet<Customer>? Customers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=ShopBaseballBatsData");
+            optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=ShopBaseballBatsData2");
            
         }
     }

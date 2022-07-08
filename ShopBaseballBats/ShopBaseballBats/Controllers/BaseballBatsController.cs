@@ -1,247 +1,163 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ShopBaseballBats.Data;
 using ShopBaseballBats.Models;
-using System.Diagnostics;
 
 namespace ShopBaseballBats.Controllers
 {
     public class BaseballBatsController : Controller
     {
         private readonly BaseballBatContext _context;
+
         public BaseballBatsController(BaseballBatContext context)
         {
             _context = context;
         }
-        /*
-        public IActionResult Create(Customer customer)
-        {
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        */
-        public IActionResult Index()
-        {
-            var model = _context.BaseballBats.ToList();
-            return View(model);
-        }
-        /*possible use to use for saving data using bool is active elsewhere
-          public IActionResult GetActive()
-        {
-            var model = _context.Customers.Where(e => IsActive).ToList();
-            return View(model);
-        }
-        */
-        //to get a specific customer vs a collection
 
-
-        /*
-        
-        public IActionResult Details(string name)
+        // GET: BaseballBats
+        public async Task<IActionResult> Index()
         {
-            var model = _context.Customers.FirstOrDefault(e => e.FullName == name);
-            return View(model);
+              return _context.BaseballBats != null ? 
+                          View(await _context.BaseballBats.ToListAsync()) :
+                          Problem("Entity set 'BaseballBatContext.BaseballBats'  is null.");
         }
 
-        public IActionResult Update(Customer customer)
+        // GET: BaseballBats/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            _context.Entry(customer).State = EntityState.Modified;
-            _context.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete(string name)
-        {
-            var original = _context.Customers.FirstOrDefault(e => e.FirstName == name);
-            if (original != null)
-            {
-                _context.Customers.Remove(original);
-                _context.SaveChanges();
-            }
-            return RedirectToAction("Index");
-        }
-        */
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    private BaseballBatsRepository _baseballBatsRepository = null;
-    public BaseballBatsController()
-    {
-        _baseballBatsRepository = new BaseballBatsRepository();
-    }
-    public ActionResult Index()
-    {
-        var baseballBats = _baseballBatsRepository.GetBaseballBats();
-        return View(baseballBats);
-    }
-    public ActionResult Detail(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-
-        }
-        var baseballBats = _baseballBatsRepository.GetBaseballBats(id.Value);
-
-        return View(baseballBats);
-
-    }
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-    */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using ShopBaseballBats.Data;
-using ShopBaseballBats.Models;
-using System.Diagnostics;
-
-namespace ShopBaseballBats.Controllers
-{
-    //[Route("api/[controller]")]
-    public class BaseballBatsController : Controller
-
-
-        private readonly BaseballBatContext _context; //BaseballBatsRepository _baseballBatsRepository = null;
-    public BaseballBatsController(BaseballBatContext context)
-    {
-        _context = context;
-        // _baseballBatsRepository = new BaseballBatsRepository();
-    }
-    public IActionResult Create()
-    {
-        var baseballBats = _baseballBatsRepository.GetBaseballBats();
-        return View(baseballBats);
-    }
-
-    public ActionResult Index()
-    {
-        var baseballBats = _baseballBatsRepository.GetBaseballBats();
-        return View(baseballBats);
-    }
-    public ActionResult Detail(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-
-        }
-        var baseballBats = _baseballBatsRepository.GetBaseballBats(id.Value);
-
-        return View(baseballBats);
-
-    }
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-}
-}
-
-
-}
-       // [HttpGet]
-      /*  public async Task<IActionResult> Index()
-        {
-            try
-            {
-                var baseballBats = await _baseballBatsRepository.GetBaseballBatsAsync();
-                return View(baseballBats);
-            }
-            catch (Exception)
-            {
-                return this.StatusCode(StatusCodes.Status500InternalServerError,"Database Failure");
-            }
-        }
-        public IActionResult Detail(int? id)
-        {
-            if (id == null)
+            if (id == null || _context.BaseballBats == null)
             {
                 return NotFound();
-
             }
-            var baseballBats = _baseballBatsRepository.GetBaseballBats(id.Value);
-           
-            return View(baseballBats);
 
+            var baseballBats = await _context.BaseballBats
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (baseballBats == null)
+            {
+                return NotFound();
+            }
+
+            return View(baseballBats);
         }
-        public IActionResult Privacy()
+
+        // GET: BaseballBats/Create
+        public IActionResult Create()
         {
             return View();
+        }
+
+        // POST: BaseballBats/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,ModelYear")] BaseballBats baseballBats)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(baseballBats);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(baseballBats);
+        }
+
+        // GET: BaseballBats/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null || _context.BaseballBats == null)
+            {
+                return NotFound();
+            }
+
+            var baseballBats = await _context.BaseballBats.FindAsync(id);
+            if (baseballBats == null)
+            {
+                return NotFound();
+            }
+            return View(baseballBats);
+        }
+
+        // POST: BaseballBats/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ModelYear")] BaseballBats baseballBats)
+        {
+            if (id != baseballBats.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(baseballBats);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!BaseballBatsExists(baseballBats.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(baseballBats);
+        }
+
+        // GET: BaseballBats/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || _context.BaseballBats == null)
+            {
+                return NotFound();
+            }
+
+            var baseballBats = await _context.BaseballBats
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (baseballBats == null)
+            {
+                return NotFound();
+            }
+
+            return View(baseballBats);
+        }
+
+        // POST: BaseballBats/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            if (_context.BaseballBats == null)
+            {
+                return Problem("Entity set 'BaseballBatContext.BaseballBats'  is null.");
+            }
+            var baseballBats = await _context.BaseballBats.FindAsync(id);
+            if (baseballBats != null)
+            {
+                _context.BaseballBats.Remove(baseballBats);
+            }
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool BaseballBatsExists(int id)
+        {
+          return (_context.BaseballBats?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
-      /*  
-        private readonly ILogger<BaseballBatsController> _logger;
-
-        public BaseballBatsController(ILogger<BaseballBatsController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            
-            return View();
-        }
-
-        
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-    }
-}*/
