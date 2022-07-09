@@ -22,27 +22,27 @@ namespace ShopBaseballBats.Controllers
         // GET: CustomerInfo
         public async Task<IActionResult> Index()
         {
-              return _context.BaseballBats != null ? 
-                          View(await _context.BaseballBats.ToListAsync()) :
-                          Problem("Entity set 'BaseballBatContext.BaseballBats'  is null.");
+              return _context.Customers != null ? 
+                          View(await _context.Customers.ToListAsync()) :
+                          Problem("Entity set 'BaseballBatContext.Customers'  is null.");
         }
 
         // GET: CustomerInfo/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.BaseballBats == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var baseballBats = await _context.BaseballBats
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (baseballBats == null)
+            var customers = await _context.Customers
+                .FirstOrDefaultAsync(m => m.CustomerId == id);
+            if (customers == null)
             {
                 return NotFound();
             }
 
-            return View(baseballBats);
+            return View(customers);
         }
 
         // GET: CustomerInfo/Create
@@ -56,31 +56,31 @@ namespace ShopBaseballBats.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ModelYear")] BaseballBats baseballBats)
+        public async Task<IActionResult> Create([Bind("CustomerId,FullName")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(baseballBats);
+                _context.Add(customer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(baseballBats);
+            return View(customer);
         }
 
         // GET: CustomerInfo/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.BaseballBats == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var baseballBats = await _context.BaseballBats.FindAsync(id);
-            if (baseballBats == null)
+            var customers = await _context.Customers.FindAsync(id);
+            if (customers == null)
             {
                 return NotFound();
             }
-            return View(baseballBats);
+            return View(customers);
         }
 
         // POST: CustomerInfo/Edit/5
@@ -88,9 +88,9 @@ namespace ShopBaseballBats.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ModelYear")] BaseballBats baseballBats)
+        public async Task<IActionResult> Edit(int id, [Bind("CustomerId,FullName")] Customer customer)
         {
-            if (id != baseballBats.Id)
+            if (id != customer.CustomerId)
             {
                 return NotFound();
             }
@@ -99,12 +99,12 @@ namespace ShopBaseballBats.Controllers
             {
                 try
                 {
-                    _context.Update(baseballBats);
+                    _context.Update(customer);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BaseballBatsExists(baseballBats.Id))
+                    if (!BaseballBatsExists(customer.CustomerId))
                     {
                         return NotFound();
                     }
@@ -115,25 +115,25 @@ namespace ShopBaseballBats.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(baseballBats);
+            return View(customer);
         }
 
         // GET: CustomerInfo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.BaseballBats == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var baseballBats = await _context.BaseballBats
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (baseballBats == null)
+            var customers = await _context.Customers
+                .FirstOrDefaultAsync(m => m.CustomerId == id);
+            if (customers == null)
             {
                 return NotFound();
             }
 
-            return View(baseballBats);
+            return View(customers);
         }
 
         // POST: CustomerInfo/Delete/5
@@ -141,14 +141,14 @@ namespace ShopBaseballBats.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.BaseballBats == null)
+            if (_context.Customers == null)
             {
-                return Problem("Entity set 'BaseballBatContext.BaseballBats'  is null.");
+                return Problem("Entity set 'BaseballBatContext.Customers'  is null.");
             }
-            var baseballBats = await _context.BaseballBats.FindAsync(id);
-            if (baseballBats != null)
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer != null)
             {
-                _context.BaseballBats.Remove(baseballBats);
+                _context.Customers.Remove(customer);
             }
             
             await _context.SaveChangesAsync();
