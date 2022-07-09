@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BaseballBatContext>();
-//builder.Services.AddScoped<IBaseballBatsRepository, IBaseballBatsRepository>();
+
+
 
 
 
