@@ -13,7 +13,7 @@ namespace ShopBaseballBats.Models
             [Key]
             public int CustomerId { get; private set; }
             public string? EmailAddress { get; set; }
-            public string FirstName { get; set; }
+            public string? FirstName { get; set; }
             public string FullName
             {
                 get
@@ -32,7 +32,7 @@ namespace ShopBaseballBats.Models
            
             }
            
-            public string LastName { get; set; }
+            public string? LastName { get; set; }
            
         //public  Address? Address { get; set; }
         public string? Phone { get; set; }

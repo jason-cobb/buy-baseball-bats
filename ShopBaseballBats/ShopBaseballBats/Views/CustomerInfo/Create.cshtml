@@ -1,12 +1,11 @@
 @model ShopBaseballBats.Models.Customer
-
 @{
     ViewData["Title"] = "Create";
 }
 
 <h1>Create Account</h1>
 
-<h4>BaseballBats</h4>
+<h4>Customer Contact Info</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,22 +13,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
            
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
+                <label asp-for="FirstName" class="control-label">First Name</label>
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
              <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
+                <label asp-for="LastName" class="control-label">Last Name</label>
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EmailAddress" class="control-label"></label>
+                <label asp-for="EmailAddress" class="control-label">Email Address</label>
                 <input asp-for="EmailAddress" class="form-control" />
                 <span asp-validation-for="EmailAddress" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Phone" class="control-label"></label>
+                <label asp-for="Phone" class="control-label">Phone number (10 digits)</label>
                 <input asp-for="Phone" class="form-control" />
                 <span asp-validation-for="Phone" class="text-danger"></span>
             </div>
