@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopBaseballBats", "ShopBas
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9BE7CDAC-C161-4998-8BB0-89B13045EAC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopBaseballBats.BLTest", "Tests\ShopBaseballBats.BLTest\ShopBaseballBats.BLTest.csproj", "{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopBaseballBats.BLTest", "Tests\ShopBaseballBats.BLTest\ShopBaseballBats.BLTest.csproj", "{5BCBC6AE-E2BA-442D-ACF0-4BBA80206FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

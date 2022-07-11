@@ -60,7 +60,7 @@ namespace ShopBaseballBats.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(customer);
+                _context.Customers.Add(customer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -99,7 +99,7 @@ namespace ShopBaseballBats.Controllers
             {
                 try
                 {
-                    _context.Update(customer);
+                    _context.Customers.Update(customer);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
