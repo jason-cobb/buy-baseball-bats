@@ -1,4 +1,4 @@
-using ShopBaseballBats.Data;
+using ShopBaseballBats.Data2;
 using ShopBaseballBats.Models;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ShopBaseballBats.Data;
+using ShopBaseballBats.Data2;
 using ShopBaseballBats.Models;
+
 
 namespace ShopBaseballBats.Controllers
 {
@@ -28,6 +29,7 @@ namespace ShopBaseballBats.Controllers
         }
 
         // GET: CustomerInfo/Details/5
+        //[Route("Customer/{id}/Details")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Customers == null)
@@ -56,11 +58,11 @@ namespace ShopBaseballBats.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CustomerId,FullName")] Customer customer)
+        public async Task<IActionResult> Create([Bind("EmailAddress,FullName")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                _context.Customers.Add(customer);
+                _context.Add(customer);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -70,7 +72,7 @@ namespace ShopBaseballBats.Controllers
         // GET: CustomerInfo/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Customers == null)
+            if (id == null || _context == null)
             {
                 return NotFound();
             }
@@ -99,12 +101,12 @@ namespace ShopBaseballBats.Controllers
             {
                 try
                 {
-                    _context.Customers.Update(customer);
+                    _context.Update(customer);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BaseballBatsExists(customer.CustomerId))
+                    if (!CustomersExists(customer.CustomerId))
                     {
                         return NotFound();
                     }
@@ -121,7 +123,7 @@ namespace ShopBaseballBats.Controllers
         // GET: CustomerInfo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Customers == null)
+            if (id == null || _context == null)
             {
                 return NotFound();
             }
@@ -145,19 +147,19 @@ namespace ShopBaseballBats.Controllers
             {
                 return Problem("Entity set 'BaseballBatContext.Customers'  is null.");
             }
-            var customer = await _context.Customers.FindAsync(id);
-            if (customer != null)
+            var customers = await _context.Customers.FindAsync(id);
+            if (customers != null)
             {
-                _context.Customers.Remove(customer);
+                _context.Customers.Remove(customers);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BaseballBatsExists(int id)
+        private bool CustomersExists(int id)
         {
-          return (_context.BaseballBats?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Customers?.Any(e => e.CustomerId == id)).GetValueOrDefault();
         }
     }
 }

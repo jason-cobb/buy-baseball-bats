@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using ShopBaseballBats.Models;
-using ShopBaseballBats.Data;
+using ShopBaseballBats.Data2;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
@@ -12,7 +12,9 @@ namespace ShopBaseballBats.Models
     {
             [Key]
             public int CustomerId { get; private set; }
+       
             public string? EmailAddress { get; set; }
+
             public string? FirstName { get; set; }
             public string FullName
             {
@@ -31,7 +33,8 @@ namespace ShopBaseballBats.Models
                 }
            
             }
-           
+        
+        [MinLength(2)]
             public string? LastName { get; set; }
            
         //public  Address? Address { get; set; }
