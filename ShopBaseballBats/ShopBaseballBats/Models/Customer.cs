@@ -34,10 +34,11 @@ namespace ShopBaseballBats.Models
            
             }
         
-        [MinLength(2)]
+        [StringLength(60), MinLength(2)]
             public string? LastName { get; set; }
            
         //public  Address? Address { get; set; }
+        [StringLength(13), MinLength(10)]
         public string? Phone { get; set; }
 
         

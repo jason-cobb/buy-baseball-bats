@@ -16,5 +16,10 @@ namespace ShopBaseballBats.Data2
             optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=ShopBaseballBatsData2");
            
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<BatBrand>().HasData(new BatBrand { Id = 1, BrandName = "Louisville Slugger", })
+
+        }
     }
 }
