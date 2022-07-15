@@ -56,7 +56,7 @@ namespace ShopBaseballBats.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ModelYear")] BaseballBats baseballBats)
+        public async Task<IActionResult> Create([Bind("ModelYear, BatBrand, BatModel, Length, Weight")] BaseballBats baseballBats)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace ShopBaseballBats.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ModelYear")] BaseballBats baseballBats)
+        public async Task<IActionResult> Edit(int id, [Bind("ModelYear, BatBrand, BatModel, Length, Weight")] BaseballBats baseballBats)
         {
             if (id != baseballBats.Id)
             {

@@ -39,6 +39,7 @@ namespace ShopBaseballBats.Models
            
         //public  Address? Address { get; set; }
         [StringLength(13), MinLength(10)]
+       // [DataType(DataType.PhoneNumber)]
         public string? Phone { get; set; }
 
         

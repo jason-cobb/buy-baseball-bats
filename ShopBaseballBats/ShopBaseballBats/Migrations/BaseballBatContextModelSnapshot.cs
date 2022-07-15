@@ -52,7 +52,7 @@ namespace ShopBaseballBats.Migrations
                     b.Property<string>("BrandName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Cart")
+                    b.Property<bool?>("Cart")
                         .HasColumnType("bit");
 
                     b.Property<string>("DescriptionHtml")
@@ -62,13 +62,12 @@ namespace ShopBaseballBats.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ModelNames")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Price")
+                    b.Property<double?>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int>("Weight")
+                    b.Property<int?>("Weight")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -76,6 +75,260 @@ namespace ShopBaseballBats.Migrations
                     b.HasIndex("BaseballBatsId");
 
                     b.ToTable("BatBrands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BrandName = "Louisville Slugger",
+                            Length = 28,
+                            ModelNames = "LXT"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BrandName = "Louisville Slugger",
+                            Length = 29,
+                            ModelNames = "LXT"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BrandName = "Louisville Slugger",
+                            Length = 30,
+                            ModelNames = "LXT"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BrandName = "Louisville Slugger",
+                            Length = 31,
+                            ModelNames = "LXT"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            BrandName = "Louisville Slugger",
+                            Length = 32,
+                            ModelNames = "LXT"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            BrandName = "Louisville Slugger",
+                            Length = 33,
+                            ModelNames = "LXT"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            BrandName = "Louisville Slugger",
+                            Length = 28,
+                            ModelNames = "Meta"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            BrandName = "Louisville Slugger",
+                            Length = 29,
+                            ModelNames = "Meta"
+                        },
+                        new
+                        {
+                            Id = 25,
+                            BrandName = "Louisville Slugger",
+                            Length = 30,
+                            ModelNames = "Meta"
+                        },
+                        new
+                        {
+                            Id = 28,
+                            BrandName = "Louisville Slugger",
+                            Length = 31,
+                            ModelNames = "Meta"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            BrandName = "Louisville Slugger",
+                            Length = 32,
+                            ModelNames = "Meta"
+                        },
+                        new
+                        {
+                            Id = 34,
+                            BrandName = "Louisville Slugger",
+                            Length = 33,
+                            ModelNames = "Meta"
+                        },
+                        new
+                        {
+                            Id = 37,
+                            BrandName = "Louisville Slugger",
+                            Length = 28,
+                            ModelNames = "Xeno"
+                        },
+                        new
+                        {
+                            Id = 40,
+                            BrandName = "Louisville Slugger",
+                            Length = 29,
+                            ModelNames = "Xeno"
+                        },
+                        new
+                        {
+                            Id = 43,
+                            BrandName = "Louisville Slugger",
+                            Length = 30,
+                            ModelNames = "Xeno"
+                        },
+                        new
+                        {
+                            Id = 46,
+                            BrandName = "Louisville Slugger",
+                            Length = 31,
+                            ModelNames = "Xeno"
+                        },
+                        new
+                        {
+                            Id = 49,
+                            BrandName = "Louisville Slugger",
+                            Length = 32,
+                            ModelNames = "Xeno"
+                        },
+                        new
+                        {
+                            Id = 52,
+                            BrandName = "Louisville Slugger",
+                            Length = 33,
+                            ModelNames = "Xeno"
+                        },
+                        new
+                        {
+                            Id = 56,
+                            BrandName = "Easton",
+                            Length = 28,
+                            ModelNames = "Ghost"
+                        },
+                        new
+                        {
+                            Id = 59,
+                            BrandName = "Easton",
+                            Length = 29,
+                            ModelNames = "Ghost"
+                        },
+                        new
+                        {
+                            Id = 62,
+                            BrandName = "Easton",
+                            Length = 30,
+                            ModelNames = "Ghost"
+                        },
+                        new
+                        {
+                            Id = 65,
+                            BrandName = "Easton",
+                            Length = 31,
+                            ModelNames = "Ghost"
+                        },
+                        new
+                        {
+                            Id = 68,
+                            BrandName = "Easton",
+                            Length = 32,
+                            ModelNames = "Ghost"
+                        },
+                        new
+                        {
+                            Id = 71,
+                            BrandName = "Easton",
+                            Length = 33,
+                            ModelNames = "Ghost"
+                        },
+                        new
+                        {
+                            Id = 74,
+                            BrandName = "Easton",
+                            Length = 28,
+                            ModelNames = "Fire Fly"
+                        },
+                        new
+                        {
+                            Id = 77,
+                            BrandName = "Easton",
+                            Length = 29,
+                            ModelNames = "Fire Fly"
+                        },
+                        new
+                        {
+                            Id = 80,
+                            BrandName = "Easton",
+                            Length = 30,
+                            ModelNames = "Fire Fly"
+                        },
+                        new
+                        {
+                            Id = 83,
+                            BrandName = "Easton",
+                            Length = 31,
+                            ModelNames = "Fire Fly"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            BrandName = "Easton",
+                            Length = 32,
+                            ModelNames = "Fire Fly"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            BrandName = "Easton",
+                            Length = 33,
+                            ModelNames = "Fire Fly"
+                        },
+                        new
+                        {
+                            Id = 93,
+                            BrandName = "Rawlings",
+                            Length = 28,
+                            ModelNames = "Mantra"
+                        },
+                        new
+                        {
+                            Id = 96,
+                            BrandName = "Rawlings",
+                            Length = 29,
+                            ModelNames = "Mantra"
+                        },
+                        new
+                        {
+                            Id = 99,
+                            BrandName = "Rawlings",
+                            Length = 30,
+                            ModelNames = "Mantra"
+                        },
+                        new
+                        {
+                            Id = 102,
+                            BrandName = "Rawlings",
+                            Length = 31,
+                            ModelNames = "Mantra"
+                        },
+                        new
+                        {
+                            Id = 105,
+                            BrandName = "Rawlings",
+                            Length = 32,
+                            ModelNames = "Mantra"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            BrandName = "Rawlings",
+                            Length = 33,
+                            ModelNames = "Mantra"
+                        });
                 });
 
             modelBuilder.Entity("ShopBaseballBats.Models.Customer", b =>
@@ -90,15 +343,15 @@ namespace ShopBaseballBats.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
 
                     b.HasKey("CustomerId");
 

@@ -8,6 +8,33 @@ namespace ShopBaseballBats.Models
     {
         [Key]
         public int Id { get; set; }
+        public int Length { get; set; }
+            //28, 29, 30, 31, 32
+        public int? Weight { get; set; }
+        //-10, -11, -12, -9
+        public double? Price { get; set; }
+        // 325, 399, 449
+        public string? BrandName { get; set; }
+        // Louisville Slugger, Easton, Rawlings
+        public string? ModelNames { get; set; }
+        //Louisville Slugger Meta, LXT and Xeno - Easton Ghost and Fire Fly, and Rawlings Mantra
+        public string? DescriptionHtml { get; private set; }
+        public bool? Cart { get; set; }
+        /*
+        public string CoverImageFileName
+        {
+            get
+            {
+                return "lxt22.jpg"; //BatModels.Replace(" ", "-").ToLower() + "-" + BatModel.Length+ ".jpg";
+            }
+            //~/Images/meta22.jpg";
+        }*/
+        // public List<string> BatBrand { get => batBrand; set => batBrand=value; }
+        //$400, $450
+        /*public string DisplayText
+        {
+            get { return BrandName + "Shop Your Favorite Bats!"; }
+        }*/
         //[Display(Name = "Bat Brand")]
         //public BatBrand[]? BatBrands = new BatBrand[]
         //{
@@ -32,7 +59,7 @@ namespace ShopBaseballBats.Models
         //        {
         //                new ModelName() {ModelNames = "Ghost" },
         //                new ModelName() {ModelNames = "Fire Fly"},
-                       
+
         //        }
         //    },
         //    new BatBrand()
@@ -43,41 +70,9 @@ namespace ShopBaseballBats.Models
         //        ModelNames = new ModelName[]
         //        {
         //                new ModelName() {ModelNames = "Mantra" },
-                        
+
         //        }
         //    }
         //};
-        
-
-
-
-       
-
-        public int Length { get; set; }
-            //28, 29, 30, 31, 32
-        public int Weight { get; set; }
-        //-10, -11, -9
-
-
-        public string DisplayText
-        {
-            get { return BrandName + "Shop Your Favorite Bats!"; }
-        }
-        public double Price { get; set; }
-        public string? BrandName { get; private set; }
-        public string ModelNames { get; set; }
-        public string? DescriptionHtml { get; private set; }
-        public bool Cart { get; set; }
-        /*
-        public string CoverImageFileName
-        {
-            get
-            {
-                return "lxt22.jpg"; //BatModels.Replace(" ", "-").ToLower() + "-" + BatModel.Length+ ".jpg";
-            }
-            //~/Images/meta22.jpg";
-        }*/
-        // public List<string> BatBrand { get => batBrand; set => batBrand=value; }
-        //$400, $450
     }
 }

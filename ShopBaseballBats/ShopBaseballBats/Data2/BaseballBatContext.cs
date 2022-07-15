@@ -17,9 +17,76 @@ namespace ShopBaseballBats.Data2
            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<BatBrand>().HasData(new BatBrand { Id = 1, BrandName = "Louisville Slugger", })
-
+        {   
+            var final = new List<BatBrand>();
+            var lengths = new List<int>
+            {
+                28, 29, 30, 31, 32, 33
+            };
+            var price = new List<double>
+            {
+                325, 399, 449.00
+            };
+            var modelNames = new List<string>
+            {
+                "LXT", "Meta", "Xeno", 
+                "Ghost", "Fire Fly",
+                "Mantra"
+            };
+            
+            
+            var batBrands = new List<string>
+            {
+                 "Louisville Slugger",
+                 "Easton",
+                 "Rawlings"
+            };
+            var i = 0;
+            foreach (var name in modelNames)
+            foreach (var length in lengths)
+                foreach (var batBrand in batBrands) 
+                {
+                        i++; var finalBat = new BatBrand
+                        {
+                            Id=i,
+                            BrandName=batBrand,
+                            Length=length,
+                        };
+                        if (batBrand=="Louisville Slugger" && (name == "LXT" || name== "Meta" || name== "Xeno"))
+                        {
+                            AddBatToFinal(final, name, finalBat);
+                        }
+                        else if(batBrand=="Easton" && (name == "Ghost" || name== "Fire Fly"))
+                            AddBatToFinal(final, name, finalBat);
+                        else if(batBrand=="Rawlings" &&(name == "Mantra"))
+                            AddBatToFinal(final, name, finalBat);
+                        
+                }
+            modelBuilder.Entity<BatBrand>().HasData(final);
+            base.OnModelCreating(modelBuilder);
         }
+
+        private static void AddBatToFinal(List<BatBrand> final, string name, BatBrand finalBat)
+        {
+            finalBat.ModelNames = name;
+            final.Add(finalBat);
+        }
+
+        //batBrands.ForEach(b => DbContext.BrandNames.Add(b));
+        //DbContext.SaveChanges();
+
+
+
+
+        /*
+        modelBuilder.Entity<BatBrand>()
+           .HasMany(n => n.BrandName)
+           .WithMany(m => m.ModelNames)
+           .WithMany(l => l.Length)
+           .WithMany(w => w.Weight)
+           .WithMany(p => p.Price);
+        */
+
+
     }
-}
+    }
