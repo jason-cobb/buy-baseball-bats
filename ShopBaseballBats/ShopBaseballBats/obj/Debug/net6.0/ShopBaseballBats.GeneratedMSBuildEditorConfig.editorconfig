@@ -35,6 +35,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzZWJhbGxCYXRzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jason/source/repos/ShopBaseballBats/ShopBaseballBats/Views/BatBrand/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0QnJhbmRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/source/repos/ShopBaseballBats/ShopBaseballBats/Views/BatBrand/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0QnJhbmRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/source/repos/ShopBaseballBats/ShopBaseballBats/Views/BatBrand/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0QnJhbmRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/source/repos/ShopBaseballBats/ShopBaseballBats/Views/BatBrand/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0QnJhbmRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/source/repos/ShopBaseballBats/ShopBaseballBats/Views/BatBrand/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0QnJhbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jason/source/repos/ShopBaseballBats/ShopBaseballBats/Views/CustomerInfo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJJbmZvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
