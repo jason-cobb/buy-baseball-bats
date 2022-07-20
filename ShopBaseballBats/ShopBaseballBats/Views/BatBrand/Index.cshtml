@@ -12,56 +12,43 @@
 <table class="table">
     <thead>
         <tr>
+         
             <th>
                 @Html.DisplayNameFor(model => model.BrandName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ModelNames)
             </th>
-            <th>
+               <th>
                 @Html.DisplayNameFor(model => model.Length)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Weight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
             </th>
             
             <th>
-                @Html.DisplayNameFor(model => model.DescriptionHtml)
+                @Html.DisplayNameFor(model => model.Price)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cart)
-            </th>
+           
+           
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-             <td>
+           
+            <td>
                 @Html.DisplayFor(modelItem => item.BrandName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ModelNames)
             </td>
-            <td>
+             <td>
                 @Html.DisplayFor(modelItem => item.Length)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
            
-            <td>
-                @Html.DisplayFor(modelItem => item.DescriptionHtml)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cart)
-            </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

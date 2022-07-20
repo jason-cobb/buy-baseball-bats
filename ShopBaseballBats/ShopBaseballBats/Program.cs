@@ -13,6 +13,9 @@ builder.Services.AddDbContext<BaseballBatContext>();
 
 var app = builder.Build();
 
+
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -30,6 +33,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=BaseballBats}/{action=Index}/{id?}");
+    pattern: "{controller=BatBrand}/{action=Index}/{id?}");
 
 app.Run();
