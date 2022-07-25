@@ -7,27 +7,32 @@
 <h1>Home</h1>
 
 <p>
-    <a asp-action="Create">FastPitch Softball Bats</a>
+    <a>FastPitch Softball Bats</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.BatBrands)
+                
             </th>
-            <th></th>
+            <th>
+                
+    
+
+            </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.BatBrands)
+               <a>Louisville Slugger</a> | <a>Easton</a> | <a>Rawlings</a>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                  
+                  <a asp-area="" asp-controller="BatBrand" asp-action="Index">Bat Selection</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>    
             </td>
         </tr>
 }

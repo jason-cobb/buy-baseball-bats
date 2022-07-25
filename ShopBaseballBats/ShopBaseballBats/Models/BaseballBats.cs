@@ -19,8 +19,7 @@ namespace ShopBaseballBats.Models
 
       
 
-        //series-title-issuenumber.jpg
-        //batmodel-year.jpg
+        
 
 
     }
