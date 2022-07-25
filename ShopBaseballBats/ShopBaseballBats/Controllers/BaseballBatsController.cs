@@ -159,5 +159,9 @@ namespace ShopBaseballBats.Controllers
         {
           return (_context.BaseballBats?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
 }
