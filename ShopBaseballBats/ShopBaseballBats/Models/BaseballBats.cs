@@ -14,6 +14,7 @@ namespace ShopBaseballBats.Models
         [Key]
         public int Id { get; set; }
        public int ModelYear { get; set; }
+        [Display(Name = "Bat Brands")]
         public List<BatBrand>? BatBrands { get; set; }
 
 

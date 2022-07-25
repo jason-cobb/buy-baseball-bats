@@ -14,8 +14,10 @@ namespace ShopBaseballBats.Models
         //-10, -11, -12, -9
         public double? Price { get; set; }
         // 325, 399, 449
+        [Display(Name = "Brand Name")]
         public string? BrandName { get; set; }
         // Louisville Slugger, Easton, Rawlings
+        [Display(Name = "Bat Models")]
         public string? ModelNames { get; set; }
         //Louisville Slugger Meta, LXT and Xeno - Easton Ghost and Fire Fly, and Rawlings Mantra
         public string? DescriptionHtml { get; private set; }
