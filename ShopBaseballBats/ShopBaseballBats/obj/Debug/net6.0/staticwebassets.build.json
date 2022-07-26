@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WG2rrEY0UU3TrTmIrXwgfHOM9WBgVI7W1yYn4ZisLv0=",
+  "Hash": "+hGL0NQ1N4psGbP38Y57T3MeavA3EaOGNICzqd1l4oc=",
   "Source": "ShopBaseballBats",
   "BasePath": "_content/ShopBaseballBats",
   "Mode": "Default",
@@ -85,6 +85,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\eastonFirefly22.jpg",
+      "SourceId": "ShopBaseballBats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
+      "BasePath": "_content/ShopBaseballBats",
+      "RelativePath": "Images/eastonFirefly22.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\eastonFirefly22.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\eastonGhost22.jpg",
+      "SourceId": "ShopBaseballBats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
+      "BasePath": "_content/ShopBaseballBats",
+      "RelativePath": "Images/eastonGhost22.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\eastonGhost22.jpg"
+    },
+    {
       "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\lxt22.jpg",
       "SourceId": "ShopBaseballBats",
       "SourceType": "Discovered",
@@ -117,6 +151,23 @@
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\meta22.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\rawlingsMantra22.jpg",
+      "SourceId": "ShopBaseballBats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
+      "BasePath": "_content/ShopBaseballBats",
+      "RelativePath": "Images/rawlingsMantra22.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\rawlingsMantra22.jpg"
     },
     {
       "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\js\\site.js",

@@ -1,7 +1,8 @@
 @model IEnumerable<ShopBaseballBats.Models.BaseballBats>
 
 @{
-    ViewData["Title"] = "Index";
+    
+    ViewData["Title"] = "Home";
     var brands = new string[]
     {
     "Louisville Slugger",
@@ -18,25 +19,25 @@
 
     <div class="row">
         
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h4>Louisville Slugger</h4>
             <img src="@Url.Content("~/Images/lxt22.jpg")"
-                alt="the 2022 Louisville Slugger LXT"
-                class="img-responsive"/>
+                alt="Louisville Slugger LXT Bat"
+                class="img-responsive" />
                  <a asp-area="" asp-controller="BatBrand" asp-action="Index">Bat Selection</a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h4>Easton</h4>
-            <img src="@Url.Content("~/Images/lxt22.jpg")"
-                alt="the 2022 Louisville Slugger LXT"
-                class="img-responsive"/>
+            <img src="@Url.Content("~/Images/eastonGhost22")"
+                alt="Easton Ghost Fastpitch Bat"
+                class="img-responsive" />
                 <a asp-area="" asp-controller="BatBrand" asp-action="Index">Bat Selection</a>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h4>Rawlings</h4>
-            <img src="@Url.Content("~/Images/lxt22.jpg")"
-                alt="the 2022 Louisville Slugger LXT"
-                class="img-responsive"/>
+            <img src="@Url.Content("~/Images/rawlingsMantra22.jpg")"
+                alt="Rawlings Mantra Fastpitch Bat"
+                class="img-responsive" />
                  <a asp-area="" asp-controller="BatBrand" asp-action="Index">Bat Selection</a>
         </div>
        
