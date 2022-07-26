@@ -13,8 +13,8 @@ namespace ShopBaseballBats.Data2
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=ShopBaseballBatsData2");
-           
+            //optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=ShopBaseballBatsData2");
+            optionsBuilder.UseSqlite("Data Source= {ShopBaseballBatsData2.db}");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {   
