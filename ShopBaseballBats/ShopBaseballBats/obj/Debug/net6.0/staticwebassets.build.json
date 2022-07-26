@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FakFFrjmQNppatLoJHAyNTC4fFCDfsW58DpW7DMX+bs=",
+  "Hash": "WG2rrEY0UU3TrTmIrXwgfHOM9WBgVI7W1yYn4ZisLv0=",
   "Source": "ShopBaseballBats",
   "BasePath": "_content/ShopBaseballBats",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\lxt22.jpg",
+      "SourceId": "ShopBaseballBats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
+      "BasePath": "_content/ShopBaseballBats",
+      "RelativePath": "Images/lxt22.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\lxt22.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\meta22.jpg",
+      "SourceId": "ShopBaseballBats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
+      "BasePath": "_content/ShopBaseballBats",
+      "RelativePath": "Images/meta22.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Always",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\meta22.jpg"
     },
     {
       "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\js\\site.js",
