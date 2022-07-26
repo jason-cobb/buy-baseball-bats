@@ -15,20 +15,16 @@
 <p>
     <a>We provide the top rated bats from the top rated brands.</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BatBrands)
-                
-            </th>
-            <th>
-                
-                 <a>Select Below</a>
 
-            </th>
-        </tr>
-    </thead>
+    <div class="row">
+        <div class="col-md-3">
+            <h4>the Amazing Bat</h4>
+            <img src="\Images\meta22.jpg"
+                alt="the 2022 Louisville Slugger Meta"
+                class="img-responsive"/>
+        </div>
+     </div>
+
     <tbody>
 @foreach (var brand in brands)
 {
@@ -44,4 +40,4 @@
         </tr>
 }
     </tbody>
-</table>
+
