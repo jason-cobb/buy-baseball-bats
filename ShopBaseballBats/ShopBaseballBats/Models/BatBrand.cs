@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace ShopBaseballBats.Models
 {
+    [Display(Name = "Bat Brand")]
     public class BatBrand
     {
         [Key]

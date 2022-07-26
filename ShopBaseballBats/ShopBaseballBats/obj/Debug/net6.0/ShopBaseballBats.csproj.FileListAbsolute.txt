@@ -267,3 +267,6 @@ C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\r
 C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\wwwroot\Images\meta22.jpg
 C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\wwwroot\Images\lxt22.jpg
+C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\wwwroot\Images\eastonFirefly22.jpg
+C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\wwwroot\Images\eastonGhost22.jpg
+C:\Users\jason\source\repos\ShopBaseballBats\ShopBaseballBats\bin\Debug\net6.0\wwwroot\Images\rawlingsMantra22.jpg

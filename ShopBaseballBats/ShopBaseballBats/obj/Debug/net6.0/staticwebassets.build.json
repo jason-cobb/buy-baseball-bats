@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+hGL0NQ1N4psGbP38Y57T3MeavA3EaOGNICzqd1l4oc=",
+  "Hash": "AWH7dTPI1NnBBlKwxUxrQ/tsVBoHlfdW3ZkVSFl/5hk=",
   "Source": "ShopBaseballBats",
   "BasePath": "_content/ShopBaseballBats",
   "Mode": "Default",
@@ -97,7 +97,7 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
+      "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\eastonFirefly22.jpg"
     },
@@ -114,7 +114,7 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
+      "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\eastonGhost22.jpg"
     },
@@ -165,7 +165,7 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
+      "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\rawlingsMantra22.jpg"
     },
