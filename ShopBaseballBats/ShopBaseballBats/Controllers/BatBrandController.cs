@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ShopBaseballBats.Data2;
+using ShopBaseballBats.Data3;
 using ShopBaseballBats.Models;
 
 namespace ShopBaseballBats.Controllers

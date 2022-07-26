@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using ShopBaseballBats.Models;
-using ShopBaseballBats.Data2;
+using ShopBaseballBats.Data3;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
