@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AWH7dTPI1NnBBlKwxUxrQ/tsVBoHlfdW3ZkVSFl/5hk=",
+  "Hash": "dZwFZtVfgsKUmFHWn64eOFnSHK0DHaI+mhAYRZoxCEg=",
   "Source": "ShopBaseballBats",
   "BasePath": "_content/ShopBaseballBats",
   "Mode": "Default",
@@ -102,21 +102,21 @@
       "OriginalItemSpec": "wwwroot\\Images\\eastonFirefly22.jpg"
     },
     {
-      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\eastonGhost22.jpg",
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\eastonGhost20.jpg",
       "SourceId": "ShopBaseballBats",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
       "BasePath": "_content/ShopBaseballBats",
-      "RelativePath": "Images/eastonGhost22.jpg",
+      "RelativePath": "Images/eastonGhost20.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Always",
+      "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\eastonGhost22.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\eastonGhost20.jpg"
     },
     {
       "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\lxt22.jpg",
@@ -153,12 +153,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\meta22.jpg"
     },
     {
-      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\rawlingsMantra22.jpg",
+      "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\Images\\rawlingsMantra.jpg",
       "SourceId": "ShopBaseballBats",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\",
       "BasePath": "_content/ShopBaseballBats",
-      "RelativePath": "Images/rawlingsMantra22.jpg",
+      "RelativePath": "Images/rawlingsMantra.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,7 +167,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\rawlingsMantra22.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\rawlingsMantra.jpg"
     },
     {
       "Identity": "C:\\Users\\jason\\source\\repos\\ShopBaseballBats\\ShopBaseballBats\\wwwroot\\js\\site.js",
