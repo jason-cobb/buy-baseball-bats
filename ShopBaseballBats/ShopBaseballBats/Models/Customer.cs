@@ -12,9 +12,12 @@ namespace ShopBaseballBats.Models
     {
             [Key]
         [Display(Name = "Customer #")]
-        public int CustomerId { get; private set; }
+        public int CustomerId { get; set; }
         [Display(Name = "Email Address")]
         public string? EmailAddress { get; set; }
+
+
+
         [Display(Name = "First Name")]
         public string? FirstName { get; set; }
             public string FullName

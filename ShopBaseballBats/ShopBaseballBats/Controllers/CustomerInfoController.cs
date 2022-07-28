@@ -29,7 +29,6 @@ namespace ShopBaseballBats.Controllers
         }
 
         // GET: CustomerInfo/Details/5
-        //[Route("Customer/{id}/Details")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Customers == null)
@@ -37,14 +36,14 @@ namespace ShopBaseballBats.Controllers
                 return NotFound();
             }
 
-            var customers = await _context.Customers
+            var customer = await _context.Customers
                 .FirstOrDefaultAsync(m => m.CustomerId == id);
-            if (customers == null)
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            return View(customers);
+            return View(customer);
         }
 
         // GET: CustomerInfo/Create
@@ -72,17 +71,17 @@ namespace ShopBaseballBats.Controllers
         // GET: CustomerInfo/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var customers = await _context.Customers.FindAsync(id);
-            if (customers == null)
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer == null)
             {
                 return NotFound();
             }
-            return View(customers);
+            return View(customer);
         }
 
         // POST: CustomerInfo/Edit/5
@@ -90,7 +89,7 @@ namespace ShopBaseballBats.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EmailAddress,FirstName,LastName,Phone")] Customer customer)
+        public async Task<IActionResult> Edit(int id,  Customer customer)
         {
             if (id != customer.CustomerId)
             {
@@ -123,19 +122,19 @@ namespace ShopBaseballBats.Controllers
         // GET: CustomerInfo/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context == null)
+            if (id == null || _context.Customers == null)
             {
                 return NotFound();
             }
 
-            var customers = await _context.Customers
+            var customer = await _context.Customers
                 .FirstOrDefaultAsync(m => m.CustomerId == id);
-            if (customers == null)
+            if (customer == null)
             {
                 return NotFound();
             }
 
-            return View(customers);
+            return View(customer);
         }
 
         // POST: CustomerInfo/Delete/5
@@ -147,10 +146,10 @@ namespace ShopBaseballBats.Controllers
             {
                 return Problem("Entity set 'BaseballBatContext.Customers'  is null.");
             }
-            var customers = await _context.Customers.FindAsync(id);
-            if (customers != null)
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer != null)
             {
-                _context.Customers.Remove(customers);
+                _context.Customers.Remove(customer);
             }
             
             await _context.SaveChangesAsync();
