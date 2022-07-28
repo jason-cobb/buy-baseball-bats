@@ -32,7 +32,9 @@ The user will also be able to select the "Create Account" on the nav bar tab to 
  ## Features
  - Additional class that inherits from a parent: BaseballBatContext inherits from DbContext
  - Create a List and populate data: BaseballBatContext has a DBSet of Customers from Line 12 that will populate, retrieve and appear on the Create Account and Customer information pages
- - Unit Test is in CustomerTest.cs
+ - Unit Test is under "Solution 'ShopBaseballBats'", Tests folder, ShopBaseballBats.BLTest in CustomerTest.cs 
+      - Run Test by opening the test explorer: pressing Ctrl+R, A (or the Test tab option top of screen and first selection of Run All Tests). All 3 tests pass and you can open the test explorer and expand each folder to get to see the three test names in the explorer.
+ - Linq is used to query the controller from the database
  
 
 
