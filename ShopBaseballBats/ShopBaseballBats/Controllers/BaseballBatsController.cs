@@ -22,6 +22,8 @@ namespace ShopBaseballBats.Controllers
         // GET: BaseballBats
         public async Task<IActionResult> Index()
         {
+              //List<BatBrand> batBrands = await _context.BatBrands.ToListAsync();
+              //List<BaseballBats> baseballBats = await _context.BaseballBats.ToListAsync();
               return _context.BaseballBats != null ? 
                           View(await _context.BaseballBats.ToListAsync()) :
                           Problem("Entity set 'BaseballBatContext.BaseballBats'  is null.");

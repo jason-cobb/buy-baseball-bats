@@ -24,6 +24,7 @@ namespace ShopBaseballBats.Models
         public string? DescriptionHtml { get; private set; }
         public bool? Cart { get; set; }
         /*
+         * original repository
         public string CoverImageFileName
         {
             get
