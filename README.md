@@ -35,6 +35,7 @@ The user will also be able to select the "Create Account" on the nav bar tab to 
  - Unit Test is under "Solution 'ShopBaseballBats'", Tests folder, ShopBaseballBats.BLTest in CustomerTest.cs 
       - Run Test by opening the test explorer: pressing Ctrl+R, A (or the Test tab option top of screen and first selection of Run All Tests). All 3 tests pass and you can open the test explorer and expand each folder to get to see the three test names in the explorer.
  - Linq is used to query the controller from the database
+ - Regular Expression is utilized to validate the Customer Phone and display an error message for invalid attempts.
  
 
 
