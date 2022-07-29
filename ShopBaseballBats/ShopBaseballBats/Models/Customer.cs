@@ -41,10 +41,14 @@ namespace ShopBaseballBats.Models
         [StringLength(60), MinLength(2)]
         [Display(Name = "Last Name")]
         public string? LastName { get; set; }
-           
+
         //public  Address? Address { get; set; }
-        [StringLength(13), MinLength(10)]
-       // [DataType(DataType.PhoneNumber)]
+
+        // [StringLength(13), MinLength(10)]
+        [Required(ErrorMessage = "You must provide a phone number.")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$",
+                   ErrorMessage = "Entered phone format is not valid.")]
         public string? Phone { get; set; }
 
         
