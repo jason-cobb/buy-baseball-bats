@@ -18,7 +18,7 @@ The user will also be able to select the "Create Account" on the nav bar tab to 
 ## Getting Started
 1. Clone 'https://github.com/jason-cobb/buy-baseball-bats.git'
 2. Navigate to the 'ShopBaseballBats' solution folder
-3. Run 'dotnet run'
+3. Run 'dotnet run' from command line or open your IDE and clone, then Build solution (Ctrl+Shift+B in Visual Studio)
 4. View the bats, navigate to the bat models via the hyperlinks or the navbar to make a selection
 5. Create an account! Go to the "Create Account" to input your information and create your account, upon input you will be directed to the customer page showing you are now in the database
 
