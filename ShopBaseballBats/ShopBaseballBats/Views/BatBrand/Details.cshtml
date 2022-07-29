@@ -16,12 +16,7 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Length)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
+      
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Price)
         </dt>
@@ -40,17 +35,20 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ModelNames)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DescriptionHtml)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DescriptionHtml)
-        </dd>
+        
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Cart)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cart)
+           
+            @Html.DropDownListFor(model => model.Cart, new SelectList(
+                new[] {
+                    new {Value = "true", Text = "Yes"},
+                    new {Value = "false", Text = "No"},
+                },
+                "Value",
+                "Text"
+            ))
         </dd>
     </dl>
 </div>

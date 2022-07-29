@@ -7,7 +7,7 @@
 <h1>Customer Database</h1>
 
 <p>
-    Please enter the appropriate information.
+    <a asp-action="Create">Create New Account</a> 
 </p>
 <table class="table">
     <thead>
@@ -50,7 +50,7 @@
                 @Html.DisplayFor(modelItem => item.Phone)
                 @Html.ValidationMessageFor(modelItem => item.Phone)
             </td>
-            <td><a asp-action="Create">Create New Account</a> |
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit This Account</a> |
                 <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a> |
                 

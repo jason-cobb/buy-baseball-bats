@@ -29,7 +29,7 @@ namespace ShopBaseballBats.Models
         {
             get
             {
-                return "lxt22.jpg"; //BatModels.Replace(" ", "-").ToLower() + "-" + BatModel.Length+ ".jpg";
+                return "lxt22.jpg"; //ModelNames.Replace(" ", "-").ToLower() + "-" + BatModel.Length+ ".jpg";
             }
             //~/Images/meta22.jpg";
         }*/
